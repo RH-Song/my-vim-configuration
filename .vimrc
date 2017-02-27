@@ -525,8 +525,8 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 nnoremap <Leader>ud :GundoToggle<CR>
 
 " LateX 
-let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode$*'
-let g:Tex_ViewRule_pdf = 'evince'
+"let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode$*'
+"let g:Tex_ViewRule_pdf = 'evince'
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep

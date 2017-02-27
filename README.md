@@ -1,6 +1,24 @@
 VIM Configurations
 ==================
 
+Building VIM from source
+------------------------
+
+```
+sudo apt install ncurses-dev
+wget https://github.com/vim/vim/archive/master.zip
+unzip master.zip
+cd vim-master
+# If on a Ubuntu 16.04, replace lua5.1-dev as liblua5.1-dev.
+sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+    libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+    libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
+    python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git
+./configure --with-features=huge --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
+sudo make
+sudo make install
+```
+
 VIM Plugins
 -----------
 
@@ -18,6 +36,12 @@ VIM Plugins
   ```
 
 - Install YouCompleteMe
+
+  ```
+  sudo add-apt-repository ppa:jonathonf/vim
+  sudo apt-get update
+  sudo apt-get vim-gtk
+  ```
   ```
   sudo apt-get install build-essential cmake
   sudo apt-get install python-dev python3-dev
