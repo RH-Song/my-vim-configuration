@@ -34,9 +34,14 @@ VIM Plugins
   ```
 
 - Configure Latex-suite
-  + Edit .vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/ftplugin/tex.vim
+  + First of all, install the texlive.
+  ```
+  sudo apt-get install texlive-full
+  ```
 
-  + Set the targit format as pdf. Change line 89 into: 
+  + Edit .vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/ftplugin/latex-suite/texrc
+
+  + Set the targit format as pdf. Change line 83 into: 
   ```
   if has('macunix')
   TexLet g:Tex_DefaultTargetFormat = 'pdf'
@@ -45,12 +50,12 @@ VIM Plugins
   endif
   ``` 
 
-  + Set builder as XeLateX. Change line 115 into:
+  + Set builder as XeLateX. Change line 108 into:
   ```
   TexLet g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode $*' /*用xelatex进行编译*/
   ```
 
-  + Set evince as the viewer. Change line 146 into:
+  + Set evince as the viewer. Change line 143 into:
   ```
   TexLet g:Tex_ViewRule_pdf = 'evince' /*用evince来预览生成的pdf*/
   ```
